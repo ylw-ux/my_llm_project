@@ -22,7 +22,7 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 # 加载大模型对象（负责矩阵计算生成）
 # device_map="auto" 会让 transformers 自动侦测你的硬件：有 NVIDIA 显卡就上显卡，没有就用 CPU
 model = AutoModelForCausalLM.from_pretrained(
-    MODEL_PATH,
+    "./models/Qwen2.5-1.5B-Instruct",
     device_map="auto",
     torch_dtype="auto"  # 自动匹配最适合你显卡/CPU 的数据精度（如 float16）
 )

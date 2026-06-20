@@ -39,7 +39,8 @@ RequestConfig(max_tokens=512, temperature=0.7, top_k=None, top_p=None, repetitio
 
 
 # 4. 执行推理
-response = engine.infer([request], request_config=request_config)
+# response = engine.infer([request], request_config=request_config)
+response = engine.infer([request], **request_config)
 
 print("🤖 模型回答:", response[0].choices[0].message.content)
 
